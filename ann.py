@@ -14,10 +14,12 @@ with open('y_test.pkl', 'rb') as f:
 
 lb = preprocessing.LabelBinarizer()
 lb.fit(y_train)
-print lb.classes_
+print(lb.classes_)
 
 y_train = lb.transform(y_train)
 y_test = lb.transform(y_test)
 
-trained_mlp=MLPClassifier(hidden_layer_sizes=(5,6,4 ),max_iter=10000,verbose=True,solver="adam").fit(X_reduced_2_train,y_train)
-print trained_mlp.score(X_reduced_2_test,y_test)
+for i in range(100):
+	trained_mlp=MLPClassifier(hidden_layer_sizes=(8),max_iter=10000,verbose=False,solver="adam",alpha=0.1).fit(X_reduced_2_train,y_train)
+	#print(trained_mlp.score(X_reduced_2_train,y_train)
+	print(trained_mlp.score(X_reduced_2_test,y_test))

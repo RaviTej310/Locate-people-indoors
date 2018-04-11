@@ -1,0 +1,90 @@
+digraph G {
+
+        rankdir=LR
+	    splines=line
+        
+        node [fixedsize=true, label=""];
+
+        subgraph cluster_0 {
+		color=white;
+		node [style=solid,color=black, shape=circle,shape=circle ,style = filled ,fillcolor=grey];
+		x1 x2;
+		label = "layer 1 (Input layer)";
+	}
+
+	subgraph cluster_1 {
+		color=white;
+		node [style=solid,color=black, shape=circle ,style = filled ,fillcolor=grey];
+		h1 h2 h3 h4 h5 h6 h7 h8;
+		label = "layer 2 (hidden layer)";
+	}
+
+	subgraph cluster_2 {
+		color=white;
+		node [style=solid,color=black, shape=circle , style = filled ,fillcolor=grey];
+		o1 o2 o3 o4;
+		label="layer 3 (output layer)";
+	}
+
+        x1 -> h1;
+        x1 -> h2;
+        x1 -> h3;
+        x1 -> h4;
+        x1 -> h5;
+        x1 -> h6;
+        x1 -> h7;
+        x1 -> h8;
+        
+        x2 -> h1;
+        x2 -> h2;
+        x2 -> h3;
+        x2 -> h4;
+        x2 -> h5;
+        x2 -> h6;
+        x2 -> h7;
+        x2 -> h8;
+
+       
+        h1 -> o1;
+        h1 -> o2;
+        h1 -> o3;
+        h1 -> o4;
+
+        h2 -> o1;
+        h2 -> o2;
+        h2 -> o3;
+        h2 -> o4;
+
+        h3 -> o1;
+        h3 -> o2;
+        h3 -> o3;
+        h3 -> o4;
+
+        h4 -> o1;
+        h4 -> o2;
+        h4 -> o3;
+        h4 -> o4;
+
+        h5 -> o1;
+        h5 -> o2;
+        h5 -> o3;
+        h5 -> o4;
+
+        h6 -> o1;
+        h6 -> o2;
+        h6 -> o3;
+        h6 -> o4;
+
+        h7 -> o1;
+        h7 -> o2;
+        h7 -> o3;
+        h7 -> o4;
+
+        h8 -> o1;
+        h8 -> o2;
+        h8 -> o3;
+        h8 -> o4;
+
+
+
+}
